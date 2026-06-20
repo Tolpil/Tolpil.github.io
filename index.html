@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александров Иван — Fullstack-разработчик</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background: #f0f2f5;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero h1 { font-size: 42px; font-weight: 700; margin-bottom: 8px; }
+        .hero .subtitle { font-size: 20px; color: #a8d8ea; margin-bottom: 20px; }
+        .hero .links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .hero .links a {
+            color: #a8d8ea; text-decoration: none; font-size: 16px;
+            padding: 8px 20px; border: 1px solid #a8d8ea; border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .hero .links a:hover { background: #a8d8ea; color: #1a1a2e; }
+
+        /* Sections */
+        section { padding: 50px 0; }
+        section:nth-child(even) { background: #fff; }
+        section:nth-child(odd) { background: #f8f9fa; }
+        .section-title {
+            font-size: 28px; font-weight: 700; color: #0f3460;
+            text-align: center; margin-bottom: 40px;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .project-card {
+            background: #fff; border-radius: 12px; padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #eef1f5;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+        .project-card h3 { font-size: 18px; color: #1a1a2e; margin-bottom: 8px; }
+        .project-card .tech {
+            display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px;
+        }
+        .project-card .tech span {
+            background: #eef1f5; padding: 2px 10px; border-radius: 12px;
+            font-size: 12px; color: #0f3460;
+        }
+        .project-card p { font-size: 14px; color: #636e72; margin-bottom: 12px; }
+        .project-card .links a {
+            font-size: 13px; color: #0f3460; text-decoration: none;
+            margin-right: 12px; font-weight: 500;
+        }
+        .project-card .links a:hover { text-decoration: underline; }
+
+        /* Skills */
+        .skills-grid {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+            max-width: 700px; margin: 0 auto;
+        }
+        .skill-tag {
+            background: #eef1f5; padding: 6px 16px; border-radius: 20px;
+            font-size: 14px; color: #1a1a2e;
+        }
+        .skill-tag.highlight { background: #0f3460; color: #fff; }
+        .skill-tag.green { background: #1b7a3d; color: #fff; }
+
+        /* About */
+        .about-text { max-width: 700px; margin: 0 auto; text-align: center; font-size: 16px; color: #2d3436; }
+
+        /* Contacts */
+        .contacts {
+            display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;
+        }
+        .contacts a {
+            color: #0f3460; text-decoration: none; font-size: 18px; font-weight: 500;
+        }
+        .contacts a:hover { text-decoration: underline; }
+
+        .footer {
+            text-align: center; padding: 30px 0;
+            font-size: 14px; color: #b2bec3;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .hero .subtitle { font-size: 16px; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <div class="hero">
+        <div class="container">
+            <h1>Александров Иван</h1>
+            <div class="subtitle">Fullstack-разработчик (React / TypeScript / Node.js)</div>
+            <div class="links">
+                <a href="https://github.com/Tolpil">GitHub</a>
+                <a href="https://t.me/Tolpil">Telegram</a>
+                <a href="mailto:Tolpil@yandex.ru">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section>
+        <div class="container">
+            <div class="section-title">Обо мне</div>
+            <div class="about-text">
+                <p>Начинающий Fullstack-разработчик. Прохожу обучение в Яндекс.Практикуме на курсе «Fullstack-разработчик плюс». Специализируюсь на React, TypeScript и Node.js.</p>
+                <p>Параллельно работаю инженером электросвязи в ООО «ГАЗПРОМНЕФТЬ ИТО». 18-летний опыт в телекоммуникациях сформировал системное мышление и ответственность.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+        <div class="container">
+            <div class="section-title">Проекты</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Stellar Burgers</h3>
+                    <div class="tech">
+                        <span>React</span><span>Redux Toolkit</span><span>TypeScript</span>
+                        <span>Cypress</span><span>Jest</span><span>Storybook</span>
+                    </div>
+                    <p>Космическая бургерная — SPA для конструирования и заказа бургеров. JWT-аутентификация, WebSocket, E2E-тесты.</p>
+                    <div class="links">
+                        <a href="https://github.com/Tolpil/stellar-burgers">Код →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>SkillSwap</h3>
+                    <div class="tech">
+                        <span>React</span><span>TypeScript</span><span>REST API</span><span>CI/CD</span>
+                    </div>
+                    <p>Платформа для обмена навыками. Поиск наставников, обмен знаниями. Production-деплой.</p>
+                    <div class="links">
+                        <a href="https://github.com/Tolpil/SkillSwap">Код →</a>
+                        <a href="https://skillswap.udarilisvtantcy.com">Демо →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Blog Customizer</h3>
+                    <div class="tech">
+                        <span>TypeScript</span><span>Vite</span>
+                    </div>
+                    <p>Интерактивное приложение для настройки параметров отображения статьи в реальном времени.</p>
+                    <div class="links">
+                        <a href="https://github.com/Tolpil/blog-customizer">Код →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sales Bonus (Пряники)</h3>
+                    <div class="tech">
+                        <span>JavaScript</span>
+                    </div>
+                    <p>Приложение для расчёта бонусов продавцов на основе данных о продажах. Алгоритм ранжирования по доходности.</p>
+                    <div class="links">
+                        <a href="https://github.com/Tolpil/sales-bonus">Код →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Webpack React</h3>
+                    <div class="tech">
+                        <span>Webpack</span><span>React</span><span>Babel</span>
+                    </div>
+                    <p>Настройка сборки React-приложения на Webpack с нуля. Babel, HMR, оптимизация для dev и production.</p>
+                    <div class="links">
+                        <a href="https://github.com/Tolpil/webpack-react">Код →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Веб-ларек</h3>
+                    <div class="tech">
+                        <span>HTML</span><span>SCSS</span><span>TypeScript</span><span>Vite</span>
+                    </div>
+                    <p>Проектная работа с компонентным подходом и адаптивной вёрсткой по БЭМ.</p>
+                    <div class="links">
+                        <a href="https://github.com/Tolpil/weblarek">Код →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+        <div class="container">
+            <div class="section-title">Навыки</div>
+            <div class="skills-grid">
+                <span class="skill-tag highlight">HTML5 / CSS3</span>
+                <span class="skill-tag highlight">JavaScript</span>
+                <span class="skill-tag highlight">TypeScript</span>
+                <span class="skill-tag highlight">React</span>
+                <span class="skill-tag highlight">Redux Toolkit</span>
+                <span class="skill-tag green">Node.js</span>
+                <span class="skill-tag green">Express</span>
+                <span class="skill-tag green">MongoDB</span>
+                <span class="skill-tag green">PostgreSQL</span>
+                <span class="skill-tag">REST API</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Jest</span>
+                <span class="skill-tag">Cypress</span>
+                <span class="skill-tag">Storybook</span>
+                <span class="skill-tag">Webpack / Vite</span>
+                <span class="skill-tag">Linux</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section>
+        <div class="container">
+            <div class="section-title">Контакты</div>
+            <div class="contacts">
+                <a href="https://github.com/Tolpil">GitHub</a>
+                <a href="https://t.me/Tolpil">Telegram</a>
+                <a href="mailto:Tolpil@yandex.ru">Tolpil@yandex.ru</a>
+                <span>+7 (914) 931-07-22</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        © 2026 Александров Иван
+    </div>
+</body>
+</html>
